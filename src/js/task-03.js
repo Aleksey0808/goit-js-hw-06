@@ -33,10 +33,12 @@ const galleryEl = document.querySelector('.gallery');
 
 const imagesEl = images.map(item =>
   `<li><img src="${item.url}"alt="${item.alt}"></img></li>`
-);
+).join('');
 
 galleryEl.insertAdjacentHTML("afterbegin", imagesEl);
 console.log(imagesEl);
+
+
 
 
 
