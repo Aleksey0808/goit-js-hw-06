@@ -35,8 +35,10 @@ const imagesEl = images.map(item =>
   `<li><img src="${item.url}"alt="${item.alt}"></img></li>`
 ).join('');
 
-galleryEl.insertAdjacentHTML("afterbegin", imagesEl);
+galleryEl.insertAdjacentHTML("beforeend", imagesEl);
 console.log(imagesEl);
+
+
 
 
 
