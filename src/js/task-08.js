@@ -1,22 +1,21 @@
+const form = document.querySelector('.login-form')
 
+form.addEventListener('submit', handleSubmit)
 
-  // const form = document.querySelector('.login-form')
+function handleSubmit(event) {
+  event.preventDefault()
+  const { email, password } = event.currentTarget.elements
+  const emailEl = email.value
+  const passwordEl = password.value
 
-  // form.addEventListener('submit', handleSubmit)
-  
-  // function handleSubmit(event) {
-  //     event.preventDefault()
-  //     const { email, password } = event.currentTarget.elements
-  
-  //     if (!email.value || !password.value) {
-  //         return alert('Все поля должны быть заполнены!')
-  //     }
-  //     const userDetails = { 
-  //       email: email.value, 
-  //       password: password.value }
-      
-  //     console.log(userDetails)
-  //     event.currentTarget.reset()
-  // }
+  if (!emailEl.trim() || !passwordEl.trim()) {
+    return alert('Все поля должны быть заполнены!')
+  }
+  const userDetails = {
+    email: emailEl,
+    password: passwordEl,
+  }
 
-  
+  console.log(userDetails)
+  event.currentTarget.reset()
+}

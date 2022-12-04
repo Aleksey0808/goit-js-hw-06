@@ -10,9 +10,11 @@ refs.incrementEl.addEventListener('click', addOnValueButtonsClick)
 refs.decrementEl.addEventListener('click', minusValueButtonsClick)
 
 function addOnValueButtonsClick() {
-  refs.valueEl.innerHTML = counterValue++
+  counterValue++
+  refs.valueEl.innerHTML = counterValue
 }
 
 function minusValueButtonsClick() {
-  refs.valueEl.innerHTML = counterValue--
+  counterValue--
+  refs.valueEl.innerHTML = counterValue
 }
