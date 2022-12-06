@@ -4,7 +4,7 @@ inputEl.addEventListener('blur', inputValidation)
 
 function inputValidation() {
   if (
-    event.currentTarget.getAttribute('data-length') <=
+    Number(event.currentTarget.getAttribute('data-length')) ===
     event.currentTarget.value.length
   ) {
     changeClass('invalid', 'valid')
